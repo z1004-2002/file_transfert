@@ -1,0 +1,17 @@
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 40px;
+}
+
+header .container_logo .logo{
+width: 90px;
+}
+header .nom{
+    font-size: 45px;
+}
+header .about a{
+    color: orange;
+    font-size: 20px;
+}
