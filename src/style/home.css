@@ -11,9 +11,10 @@
     padding: 20px 30px;
     border-radius: 7px;
     border: 2px solid orange;
-    background: rgb(240, 240, 240);
-    /* box-shadow: 0 0 10px inset orange; */
-    box-shadow: 0 0 10px rgb(158, 158, 158);
+    background: rgba(240, 240, 240, 0.582);
+    backdrop-filter: blur(10px);
+
+    /* box-shadow: 0 0 10px rgb(158, 158, 158); */
 }
 
 .home main .form h3{

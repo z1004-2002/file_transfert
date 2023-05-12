@@ -1,0 +1,294 @@
+.file main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    margin-bottom: 70px;
+}
+
+.file main .box {
+    border-radius: 7px;
+    border: 2px solid orange;
+    background: rgba(240, 240, 240, 0.158);
+    backdrop-filter: blur(10px);
+    width: 930px;
+    height: 600px;
+    margin-top: 40px;
+    padding: 8px;
+    display: flex;
+    flex-direction: row;
+}
+
+.file main .box .left {
+    background: rgba(255, 255, 255, 0.658);
+    width: 220px;
+    padding: 4px;
+    border: 1px solid orange;
+    border-radius: 4px 0px 0px 4px;
+    height: calc(600px - 24px);
+    display: flex;
+    flex-direction: column;
+}
+
+.file main .box .left .header h3 {
+    min-height: 45px;
+    background: orange;
+    border-radius: 4px 0px 0px 0px;
+    color: white;
+    min-width: 200px;
+}
+
+.file main .box .left hr {
+    border: 1px solid orange;
+}
+
+.file main .box .left .body::-webkit-scrollbar {
+    display: none;
+}
+
+.file main .box .left .body {
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    height: 100%;
+}
+
+.file main .box .left .body ul a {
+    text-decoration: none;
+}
+
+.file main .box .left .body ul li {
+    list-style: none;
+    padding: 9px 0px;
+    border-bottom: 1px solid orange;
+    color: black;
+    font-weight: 700;
+    background: rgba(255, 166, 0, 0.192);
+    transition: 0.4s;
+    width: 220px;
+}
+.file main .box .left .body ul a li:hover {
+    background: rgba(255, 166, 0, 0.473);
+}
+
+.file main .box .left .body ul .act li{
+    background: rgba(255, 166, 0, 0.719);
+}
+
+.file main .box .right{
+    background: rgba(255, 255, 255, 0.658);
+    padding: 4px;
+    border: 1px solid orange;
+    border-radius: 0px 4px 4px 0px;
+    height: calc(600px - 24px);
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+    width: 100%;
+}
+.file main .box .right .header{
+    min-height: 45px;
+    background: orange;
+    border-radius: 0px 4px 0px 0px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+}
+.file main .box .right .header h3 span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.file main .box .right .header .add_button{
+    cursor: pointer;
+}
+.file main .box .right .body{
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 50px);
+    margin-top: 4px;
+}
+
+.file main .box .right .body .file_message::-webkit-scrollbar {
+    display: none;
+}
+
+.file main .box .right .body .file_message{
+    border: 1px solid orange;
+    height: 100%;
+    padding: 5px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    height: calc(100% - 50px);
+}
+
+.file main .box .right .body .file_message .line{
+    width: 100%;
+    position: relative;
+}
+.file main .box .right .body .file_message .line .receive{
+    background: orange;
+    margin-bottom: 7px;
+    padding: 5px;
+    border-radius: 0px 10px 10px 10px;
+    min-width: 270px;
+    max-width: 400px;
+    padding-left: 10px;
+}
+.file main .box .right .body .file_message .line h5{
+    margin-bottom: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.file main .box .right .body .file_message .line_left{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.file main .box .right .body .file_message .line_right{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+
+
+.file main .box .right .body .file_message .line_right p a{
+    text-decoration: none;
+    color: white;
+}
+.file main .box .right .body .file_message .line_left p a{
+    text-decoration: none;
+    color: black;
+}
+.file main .box .right .body .file_message .line .send{
+    background: rgb(105, 68, 0);
+    padding: 5px;
+    border-radius: 10px 0px 10px 10px;
+    margin-bottom: 7px;
+    min-width: 300px;
+    max-width: 400px;
+    color: white;
+    text-align: end;
+    padding-right: 10px;
+}
+.file main .box .right .body .input{
+    border: 1px solid orange;
+    padding: 5px;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.file main .box .right .body .input .select{
+    background: orange;
+    border-radius: 5px 0 0 5px;
+    padding: 5px;
+    color: white;
+    cursor: pointer;
+}
+.file main .box .right .body .input .select #file{
+    display: none;
+}
+.file main .box .right .body .input #name{
+    width: 100%;
+    padding: 0 3px;
+    font-size: 17px;
+}
+.file main .box .right .body .input .send{
+    background: orange;
+    border-radius: 0px 5px 5px 0px;
+    padding: 5px;
+    color: white;
+    cursor: pointer;
+}
+.file .modal{
+    position: fixed;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.274);
+    backdrop-filter: blur(2px);
+    overflow: hidden;
+}
+.file .modal .pop{
+    background: rgba(255, 255, 255, 0.397);
+    padding: 20px;
+    border: 1px solid orange;
+    border-radius: 4px;
+    width: 400px;
+    position: relative;
+    height: 150px;
+}
+
+.file .modal .pop .text-field{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 0.6fr 1.4fr;
+    grid-template-rows: 30px;
+}
+.file .modal .pop .text-field label{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+.file .modal .pop .text-field input{
+    outline: none;
+    background: rgb(255, 255, 255);
+    font-size: 18px;
+    padding: 0 3px;
+}
+.file .modal .pop .buttons{
+    display: flex;
+    justify-content: flex-end;
+}
+.file .modal .pop .buttons span{
+    padding: 7px 25px;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.file .modal .pop .buttons .valid{
+    background: orange;
+    border: 2px solid transparent;
+    margin-left: 10px;
+    color: white;
+}
+.file .modal .pop .buttons .cancel{
+    color: white;
+    background: rgb(255, 82, 82);
+    border: 2px solid transparent;
+}
+.file .modal .pop .buttons .valid:hover{
+    background: transparent;
+    border: 2px solid orange;
+    color: orange;
+}
+.file .modal .pop .buttons .cancel:hover{
+    background: transparent;
+    color: rgb(255, 82, 82);
+    border: 2px solid rgb(255, 82, 82);
+}
+.file .activ{
+    display: block;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+}
+.file .disactiv{
+    display: none;
+    width: 0;
+    height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

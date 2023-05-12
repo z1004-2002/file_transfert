@@ -12,7 +12,7 @@ function App() {
         <Route path="/" element={<Home/>}></Route>
         <Route path="/about" element={<About/>}></Route>
         <Route path="/register" element={<Register/>}></Route>
-        <Route path="/file" element={<File/>}></Route>
+        <Route path="/file/:send_number/to/:number" element={<File/>}></Route>
       </Routes>
     </BrowserRouter>
   );
