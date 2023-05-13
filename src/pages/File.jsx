@@ -58,6 +58,14 @@ const File = () => {
                     setReceiver(a[0])
                 })
                 .catch(error => console.log('error', error));
+
+            // REQUETE POUR AVOIR LES FICHIERS ÉCHANGÉ
+            fetch(end + "/file/" + send_number + "/to/" + number, requestOptions)
+                .then(response => response.text())
+                .then(result => {
+                    setDiscut(JSON.parse(result))
+                })
+                .catch(error => console.log('error', error));
         }
 
         // REQUETE POUR AVOIR LA LISTE DES PRÉCEDENTS INTERLOCUTEUR 
@@ -74,14 +82,6 @@ const File = () => {
             .then(result => {
                 let a = JSON.parse(result)[0]
                 setSender(a)
-            })
-            .catch(error => console.log('error', error));
-
-        // REQUETE POUR AVOIR LES FICHIERS ÉCHANGÉ
-        fetch(end + "/file/" + send_number + "/to/" + number, requestOptions)
-            .then(response => response.text())
-            .then(result => {
-                setDiscut(JSON.parse(result))
             })
             .catch(error => console.log('error', error));
 
